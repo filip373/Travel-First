@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default footer">
+  <div class="row footer-row">
+    <div class="col-sm-6">
+      <div class="rounded-box">
+        <h3 class="box-title">Did you like it?</h3>
+        <%= form_tag '#' do %>
+          <%= text_field_tag :email, nil, placeholder: 'Your email address', class: 'block-input full-width-in' %>
+          <%= text_area_tag :content, nil, placeholder: 'Message', class: 'block-input full-width-in' %>
+          <%= submit_tag 'Send', class: 'block-input btn btn-default' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="rounded-box">
+        <div class="author">Created by Filip Soszyński</div>
+        <div class="ext-links">
+          <%= link_to 'https://github.com/filip373/Travel-First' do %>
+            <%= image_tag 'GitHub-Mark-32px.png', alt: 'GitHub' %>
+          <% end %>
+          <%= link_to 'https://pl.linkedin.com/in/filip-soszynski' do %>
+            <%= image_tag 'In-Black-34px-TM.png', alt: 'LinkedIn' %>
+          <% end %>
+        </div>
+        <div class="icons">
+          <span>Icons made by </span>
+          <%= link_to 'Freepik',
+            'http://www.flaticon.com/authors/freepik',
+            title: 'Freepik' %>
+          <span> from </span>
+          <%= link_to 'www.flaticon.com',
+            'http://www.flaticon.com',
+            title: 'Flaticon' %>
+          <span> is licensed by </span>
+          <%= link_to 'CC 3.0 BY',
+            'http://creativecommons.org/licenses/by/3.0/',
+            title: 'Creative Commons BY 3.0',
+            target: '_blank' %>
+      </div>
+      </div>
+    </div>
+</nav

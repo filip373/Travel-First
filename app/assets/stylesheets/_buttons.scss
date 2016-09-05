@@ -1,0 +1,23 @@
+.btn-custom {
+  &, &:focus {
+    background-color: $secondary-color;
+    color: $almost-white;
+  }
+  &:hover {
+    color: darken($almost-white, 10%);
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.btn-custom-inv {
+  &, &:focus {
+    background-color: $almost-white;
+    color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  &:hover {
+    color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+    background-color: darken($almost-white, 10%);
+  }
+}
