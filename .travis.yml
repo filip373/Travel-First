@@ -1,0 +1,5 @@
+language: ruby
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database travel_first_test;' -U postgres
