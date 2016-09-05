@@ -1,5 +1,10 @@
+[![Build Status](https://travis-ci.org/filip373/Travel-First.svg?branch=master)](https://travis-ci.org/filip373/Travel-First)
+[![Dependency Status](https://gemnasium.com/badges/github.com/filip373/Travel-First.svg)](https://gemnasium.com/github.com/filip373/Travel-First)
+
 # Travel First
 Travel First is a community-driven travel guide which allows users to discover and share interesting places around the world.
+
+[travel-first.herokuapp.com](https://travel-first.herokuapp.com/)
 
 ## How to run
 1. Install project dependencies with `bundle install`
@@ -16,12 +21,15 @@ Travel First is a community-driven travel guide which allows users to discover a
 
 ## How it works
 * Ruby `2.3.1` and Rails `5.0.0`
-* [PostgreSQL](https://www.postgresql.org) for database
+* [PostgreSQL](https://www.postgresql.org/) for database
 * [Rubocop](http://rubocop.readthedocs.io/en/latest/) for static code analysis
 * [Pry](http://pryrepl.org/) for debugging
 * [RSpec](http://rspec.info/) and [Capybara](http://jnicklas.github.io/capybara/) for testing
 * [SimpleCov](https://github.com/colszowka/simplecov) for code coverage
 * [Guard](http://guardgem.org/) for tasks automation
+* [Travis CI](https://travis-ci.org/) for continous integration
+* [Heroku](https://www.heroku.com/) for deployment
+* [Bootstrap](http://www.getbootstrap.com/) for front-end design
 
 ## Contributors
-[Filip Soszyński](https://www.linkedin.com/in/filip-soszy%C5%84ski-34828a126)
+[Filip Soszyński](https://www.linkedin.com/in/filip-soszynski)
