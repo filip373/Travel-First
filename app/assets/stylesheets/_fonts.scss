@@ -1,0 +1,8 @@
+@import 'https://fonts.googleapis.com/css?family=Damion|Lato';
+
+$primary-font: 'Damion', cursive;
+$secondary-font: 'Lato', sans-serif;
+
+body {
+  font-family: $secondary-font;
+}
