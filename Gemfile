@@ -10,6 +10,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'rubocop', '~> 0.42.0', require: false
+#gem 'fog', '~> 1.27', require: 'fog/aws'
+gem 'fog-aws'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'figaro'
+gem 'mini_magick'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
@@ -24,6 +29,8 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
 
 group :development do

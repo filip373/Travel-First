@@ -8,9 +8,11 @@
 <div class="container" id="content-start">
   <h1>Where would you like to go?</h1>
   <div class="row">
-    <% 12.times do %>
-      <div class="col-md-4 col-sm-6 tile">
-        <%= image_tag 'city-houses-village-buildings.png', alt: 'sth' %>
+    <% places.each do |p| %>
+      <div class="col-lg-3 col-md-4 col-sm-6 tile">
+        <%= link_to '#' do %>
+          <%= image_tag p.teaser.small.url, alt: p.name %>
+        <% end %>
       </div>
     <% end %>
   </div>
