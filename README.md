@@ -9,7 +9,7 @@ Travel First is a community-driven travel guide which allows users to discover a
 ## How to run
 1. Install project dependencies with `bundle install`
 2. Initialize database with `bundle exec rails db:setup`
-3. Run server with `bundle exec rails server`
+3. Run server with `bundle exec foreman start`
 
 ## How to develop
 * Clone [GitHub repository](https://github.com/filip373/Travel-First) to get the codebase
@@ -24,12 +24,14 @@ Travel First is a community-driven travel guide which allows users to discover a
 * [PostgreSQL](https://www.postgresql.org/) for database
 * [Rubocop](http://rubocop.readthedocs.io/en/latest/) for static code analysis
 * [Pry](http://pryrepl.org/) for debugging
-* [RSpec](http://rspec.info/) and [Capybara](http://jnicklas.github.io/capybara/) for testing
+* [RSpec](http://rspec.info/), [Capybara](http://jnicklas.github.io/capybara/), [factory_girl](https://github.com/thoughtbot/factory_girl), [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner) for testing
 * [SimpleCov](https://github.com/colszowka/simplecov) for code coverage
 * [Guard](http://guardgem.org/) for tasks automation
 * [Travis CI](https://travis-ci.org/) for continous integration
 * [Heroku](https://www.heroku.com/) for deployment
 * [Bootstrap](http://www.getbootstrap.com/) for front-end design
+* [Fog](https://github.com/fog/fog), [CarrierWave](https://github.com/carrierwaveuploader/carrierwave), [Amazon AWS](https://aws.amazon.com) for files upload
+* [Figaro](https://github.com/laserlemon/figaro) for configuration
 
 ## Contributors
 [Filip Soszyński](https://www.linkedin.com/in/filip-soszynski)

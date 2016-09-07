@@ -1,4 +1,5 @@
-inherit_from: .rubocop_todo.yml
+Rails:
+  Enabled: true
 AllCops:
   Include:
     - Rakefile
@@ -7,3 +8,5 @@ AllCops:
   Exclude:
     - db/schema.rb
     - bin/spring*
+Style/Documentation:
+  Enabled: false
