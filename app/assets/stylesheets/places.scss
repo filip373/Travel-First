@@ -1,0 +1,57 @@
+.place-title {
+  background-color: $secondary-color;
+  color: $almost-white;
+  font-size: 3em;
+  position: absolute;
+  top: 40%;
+  padding: 0.1em 0.5em;
+}
+
+.place-teaser {
+  & img {
+    width: 100%;
+  }
+}
+
+.place {
+  position: relative;
+}
+
+.slide-text {
+  padding: 10px 20px;
+  color: $almost-white;
+}
+
+.title {
+  font-size: 2em;
+  display: inline;
+}
+
+.slide {
+  background-color: $secondary-color;
+  & img {
+    padding: 0;
+  }
+}
+
+.place-arrow {
+  margin-right: 10px;
+  font-size: 2em;
+  vertical-align: sub;
+}
+
+@media (min-width: 992px) {
+  .slide {
+    border-top: 5px solid $secondary-color;
+    clear: both;
+  }
+  .place-arrow {
+    display: none;
+  }
+  .slide:nth-child(odd) .slide-text {
+    float: left;
+  }
+  .slide:nth-child(even) .slide-text {
+    float: right;
+  }
+}

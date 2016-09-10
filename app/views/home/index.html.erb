@@ -8,10 +8,10 @@
 <div class="container" id="content-start">
   <h1>Where would you like to go?</h1>
   <div class="row">
-    <% places.each do |p| %>
+    <% places.each do |place| %>
       <div class="col-lg-3 col-md-4 col-sm-6 tile">
-        <%= link_to '#' do %>
-          <%= image_tag p.teaser.small.url, alt: p.name %>
+        <%= link_to place_path(place.id) do %>
+          <%= image_tag place.teaser.small, alt: place.name %>
         <% end %>
       </div>
     <% end %>

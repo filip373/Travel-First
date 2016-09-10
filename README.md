@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/filip373/Travel-First.svg?branch=master)](https://travis-ci.org/filip373/Travel-First)
 [![Dependency Status](https://gemnasium.com/badges/github.com/filip373/Travel-First.svg)](https://gemnasium.com/github.com/filip373/Travel-First)
+[![Stories in Ready](https://badge.waffle.io/filip373/Travel-First.png?label=ready&title=Ready)](http://waffle.io/filip373/Travel-First)
 
 # Travel First
 Travel First is a community-driven travel guide which allows users to discover and share interesting places around the world.

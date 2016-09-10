@@ -1,9 +1,9 @@
 require 'rails_helper'
 require 'carrierwave/test/matchers'
 
-describe TeaserUploader do
-  let(:place) { instance_double('Place', id: 1) }
-  let(:subject) { TeaserUploader.new(place) }
+describe PhotoUploader do
+  let(:photo) { instance_double('Photo', id: 1) }
+  let(:subject) { PhotoUploader.new(photo) }
 
   before do
     File.open(File.join(Rails.root, 'spec', 'support', 'photo.jpg')) do |file|
@@ -20,10 +20,7 @@ describe TeaserUploader do
   end
 
   it 'has correct dimensions' do
-    expect(subject).to have_dimensions(1920, 1080)
-  end
-  it 'has correct small version' do
-    expect(subject.small).to have_dimensions(450, 300)
+    expect(subject).to have_dimensions(1366, 853)
   end
   it 'has correct format' do
     expect(subject).to be_format('jpeg')
