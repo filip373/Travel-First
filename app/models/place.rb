@@ -1,4 +1,6 @@
 class Place < ApplicationRecord
+  has_many :slides
+
   mount_uploader :teaser, TeaserUploader
   validates :name, :teaser, presence: true
 
