@@ -1,10 +1,10 @@
 .place-title {
   background-color: $secondary-color;
+  font-size: 2em;
+  padding: 0.05em 0.2em;
   color: $almost-white;
-  font-size: 3em;
   position: absolute;
   top: 40%;
-  padding: 0.1em 0.5em;
 }
 
 .place-teaser {
@@ -53,5 +53,12 @@
   }
   .slide:nth-child(even) .slide-text {
     float: right;
+  }
+}
+
+@media (min-width: 600px) {
+  .place-title {
+    font-size: 3em;
+    padding: 0.1em 0.5em;
   }
 }

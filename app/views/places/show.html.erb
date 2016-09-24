@@ -9,12 +9,12 @@
   </div>
   <% place.slides.each do |slide| %>
     <div class="slide row">
-      <div class="slide-text col-md-5 col-lg-4 col-xs-12">
+      <div class="slide-text col-md-4 col-lg-3 col-xs-12">
         <span class="glyphicon glyphicon-chevron-down place-arrow" aria-hidden="true"></span>
         <p class="title"><%= slide.title %></p>
         <p class="description"><%= slide.description %></p>
       </div>
-      <%= image_tag(slide.photo, alt: 'Slide photo', class: 'col-md-7 col-lg-8 col-xs-12') %>
+      <%= image_tag(slide.photo, alt: 'Slide photo', class: 'col-md-8 col-lg-9 col-xs-12') %>
     </div>
   <% end %>
 </div>
