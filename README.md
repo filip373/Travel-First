@@ -32,7 +32,8 @@ Travel First is a community-driven travel guide which allows users to discover a
 * [Heroku](https://www.heroku.com/) for deployment
 * [Bootstrap](http://www.getbootstrap.com/) for front-end design
 * [Fog](https://github.com/fog/fog), [CarrierWave](https://github.com/carrierwaveuploader/carrierwave), [Amazon AWS](https://aws.amazon.com) for files upload
-* [Figaro](https://github.com/laserlemon/figaro) for configuration
+* [Figaro](https://github.com/laserlemon/figaro) for config vars
+* [Devise](https://github.com/plataformatec/devise) for authentication
 
 ## Contributors
 [Filip Soszyński](https://www.linkedin.com/in/filip-soszynski)

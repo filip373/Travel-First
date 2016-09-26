@@ -5,8 +5,17 @@
 @import 'buttons';
 @import 'forms';
 @import 'links';
+@import 'messages';
 
 @import 'header';
 @import 'footer';
 @import 'home';
 @import 'places';
+
+body {
+  margin: auto;
+}
+
+.bottom-margined {
+  margin-bottom: 20px;
+}

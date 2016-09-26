@@ -1,4 +1,4 @@
-.btn-custom {
+.btn-custom, .navbar li > a.btn-custom {
   &, &:focus {
     background-color: $secondary-color;
     color: $almost-white;
@@ -9,7 +9,12 @@
   }
 }
 
-.btn-custom-inv {
+.navbar li > a.btn {
+  padding: 7px 15px;
+  display: inline-block;
+}
+
+.btn-custom-inv, .navbar li > a.btn-custom-inv {
   &, &:focus {
     background-color: $almost-white;
     color: $secondary-color;

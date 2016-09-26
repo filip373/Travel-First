@@ -2,7 +2,7 @@
   "name": "Travel-First",
   "description": "",
   "scripts": {
-    "postdeploy": "bundle exec rails db:schema:load db:seed"
+    "postdeploy": "bundle exec rails db:schema:load"
   },
   "env": {
     "LANG": {
@@ -33,6 +33,18 @@
       "required": true
     },
     "AWS_DIRECTORY": {
+      "required": true
+    },
+    "APP_HOST": {
+      "required": true
+    },
+    "APP_PORT": {
+      "required": true
+    },
+    "MAILER_USERNAME": {
+      "required": true
+    },
+    "MAILER_PASSWORD": {
       "required": true
     }
   },

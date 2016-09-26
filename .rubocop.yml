@@ -10,3 +10,6 @@ AllCops:
     - bin/spring*
 Style/Documentation:
   Enabled: false
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/20160924131227_devise_create_users.rb
