@@ -34,6 +34,8 @@ Travel First is a community-driven travel guide which allows users to discover a
 * [Fog](https://github.com/fog/fog), [CarrierWave](https://github.com/carrierwaveuploader/carrierwave), [Amazon AWS](https://aws.amazon.com) for files upload
 * [Figaro](https://github.com/laserlemon/figaro) for config vars
 * [Devise](https://github.com/plataformatec/devise) for authentication
+* [Simple Form](https://github.com/plataformatec/simple_form) for forms
+* [MailForm](https://github.com/plataformatec/mail_form) for contact forms
 
 ## Contributors
 [Filip Soszyński](https://www.linkedin.com/in/filip-soszynski)

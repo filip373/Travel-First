@@ -46,6 +46,9 @@
     },
     "MAILER_PASSWORD": {
       "required": true
+    },
+    "FEEDBACK_RECEIVING_EMAIL": {
+      "required": true
     }
   },
   "formation": {

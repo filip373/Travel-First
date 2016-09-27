@@ -3,10 +3,10 @@
     <div class="col-sm-6">
       <div class="rounded-box">
         <h3 class="box-title">Did you like it?</h3>
-        <%= form_tag '#' do %>
-          <%= text_field_tag :email, nil, placeholder: 'Your email address', class: 'block-input full-width-in' %>
-          <%= text_area_tag :content, nil, placeholder: 'Message', class: 'block-input full-width-in' %>
-          <%= submit_tag 'Send', class: 'block-input btn btn-default' %>
+        <%= simple_form_for @feedback do |f| %>
+          <%= f.input :email, as: :email, label: false, placeholder: 'Your email address', input_html: { class: 'block-input full-width-in' } %>
+          <%= f.input :message, as: :text, label: false, placeholder: 'Message', input_html: { class: 'block-input full-width-in' } %>
+          <%= f.button :submit, 'Send', class: 'block-input btn btn-default' %>
         <% end %>
       </div>
     </div>

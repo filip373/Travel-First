@@ -15,6 +15,8 @@ gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'figaro'
 gem 'mini_magick'
 gem 'devise'
+gem 'mail_form'
+gem 'simple_form'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
@@ -22,7 +24,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'pry', '~> 0.10.4'
+  gem 'pry'
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
 end

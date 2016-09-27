@@ -3,6 +3,7 @@ require 'rails_helper'
 
 describe 'layouts/_footer.html.erb', type: :view do
   before do
+    assign(:feedback, FeedbackForm.new)
     render
   end
 
