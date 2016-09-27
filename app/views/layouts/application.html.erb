@@ -13,26 +13,7 @@
 
   <body class="<%= controller_name %> <%= action_name %>">
     <%= render 'layouts/header' %>
-    <% if notice || alert %>
-      <div class="messages">
-        <% if alert %>
-          <div class="alert alert-danger alert-dismissible fade in text-center" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <span class="sr-only">Error:</span>
-            <span><%= alert %></span>
-          </div>
-        <% end %>
-        <% if notice %>
-          <div class="alert alert-success alert-dismissible fade in text-center" role="alert">
-            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <span class="sr-only">Notice:</span>
-            <span><%= notice %></span>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+    <%= render 'layouts/messages' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
