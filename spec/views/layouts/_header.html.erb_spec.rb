@@ -13,10 +13,6 @@ describe 'layouts/_header.html.erb', type: :view do
       expect(rendered).to have_link('Explore')
     end
 
-    it 'has Map link' do
-      expect(rendered).to have_link('Map')
-    end
-
     it 'has Log in link' do
       expect(rendered).to have_link('Log in')
     end

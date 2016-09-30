@@ -1,0 +1,31 @@
+<div class="text-center bottom-margined">
+  <h2>Share your story</h2>
+  <%= simple_form_for place do |f| %>
+    <div class="form-contents">
+      <div>
+        <div class="centered-form rounded-box">
+          <%= f.input :name, label: 'Place name', wrapper_html: { class: 'field' } %>
+          <%= f.input :teaser, label: 'Teaser photo', wrapper_html: { class: 'field' } %>
+        </div>
+      </div>
+      <%= f.simple_fields_for :slides do |ff| %>
+        <div class="centered-form rounded-box text-border slide-box">
+          <div class="border-text">
+            <% if ff.index > 2 %>
+              <%= button_tag '×', type: 'button', class: "remove-slide-#{ff.index}" %>
+            <% end %>
+            <h3>Slide <%= ff.index + 1 %></h3>
+          </div>
+          <%= ff.input :title, label: 'Title', wrapper_html: { class: 'field' } %>
+          <%= ff.input :photo, label: 'Photo', wrapper_html: { class: 'field' } %>
+          <%= ff.input :description, hint: '(100 to 650 characters)', label: 'Description', wrapper_html: { class: 'field' } %>
+        </div>
+      <% end %>
+      <button type="button" class="btn-add-slide">
+        <p>Add slide</p>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <%= f.button :submit, 'Share!', wrapper_html: { class: 'actions' } %>
+  <% end %>
+</div>

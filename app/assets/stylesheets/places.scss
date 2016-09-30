@@ -62,3 +62,55 @@
     padding: 0.1em 0.5em;
   }
 }
+
+.centered-form {
+  display: inline-block;
+  margin: 10px;
+}
+
+.centered-form textarea {
+  height: 150px;
+  width: 350px !important;
+  resize: vertical;
+  overflow: auto;
+}
+
+.border-text {
+  margin-left: 5px;
+  margin-top: -11px;
+  background: $almost-white;
+  width: 150px;
+  & h3 {
+    display: inline;
+  }
+}
+
+button[class^='remove-slide-'] {
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid red;
+  vertical-align: text-bottom;
+  background: $almost-white;
+  color: red;
+}
+
+.text-border {
+  padding-top: 0;
+}
+
+.btn-add-slide {
+  border-radius: 50%;
+  border: none;
+  height: 100px;
+  width: 100px;
+  color: $almost-white;
+  background: $secondary-color;
+  font-size: 17px;
+  & .glyphicon {
+    font-size: 24px;
+  }
+  & p {
+    margin-bottom: 0;
+  }
+  margin: 20px;
+}
