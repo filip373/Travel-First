@@ -25,6 +25,7 @@ end
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
 end
