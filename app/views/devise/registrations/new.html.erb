@@ -1,29 +1,10 @@
 <div class="text-center bottom-margined">
   <h2>Sign up</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-
-    <div class="field form-field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-
-    <div class="field form-field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field form-field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.input :email, label: false, placeholder: 'Email', autofocus: true, wrapper_html: { class: 'field' } %>
+    <%= f.input :password, autocomplete: 'off', label: false, placeholder: 'Password (6 characters min)', wrapper_html: { class: 'field' } %>
+    <%= f.input :password_confirmation, autocomplete: 'off', label: false, placeholder: 'Password confirmation', wrapper_html: { class: 'field' } %>
+    <%= f.button :submit, 'Sign up' %>
   <% end %>
 </div>

@@ -11,3 +11,20 @@ input, textarea {
   margin-bottom: 5px;
   padding: 3px;
 }
+
+.text-center .form-control {
+  width: inherit;
+  display: inline;
+}
+
+.simple_form {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+}
+
+input.file {
+  display: inline;
+}

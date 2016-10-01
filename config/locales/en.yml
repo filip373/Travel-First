@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      blank: "%{attribute} can't be blank"
+      invalid: "%{attribute} isn't valid"
+      confirmation: "%{attribute} doesn't match"
+      too_short: "%{attribute} is too short"
+      taken: "%{attribute} has already been taken"
+      not_found: "%{attribute} not found"

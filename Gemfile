@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'pg', '~> 0.18.4'
+gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'foreman'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
-gem 'rubocop', '~> 0.42.0', require: false
+gem 'rubocop', require: false
 gem 'fog-aws'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'figaro'
@@ -25,6 +25,7 @@ end
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
 end
