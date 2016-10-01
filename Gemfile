@@ -17,7 +17,6 @@ gem 'mini_magick'
 gem 'devise'
 gem 'mail_form'
 gem 'simple_form'
-gem 'babel-transpiler'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
