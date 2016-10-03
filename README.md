@@ -3,7 +3,7 @@
 [![Stories in Ready](https://badge.waffle.io/filip373/Travel-First.png?label=ready&title=Ready)](http://waffle.io/filip373/Travel-First)
 
 # Travel First
-Travel First is a community-driven travel guide which allows users to discover and share interesting places around the world.
+Travel First is a community-driven travel guide which allows you to discover and share interesting places around the world.
 
 [travel-first.herokuapp.com](https://travel-first.herokuapp.com/)
 
