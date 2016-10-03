@@ -24,66 +24,85 @@ RSpec.describe PlacesController, type: :controller do
   end
 
   describe 'GET new' do
-    it 'returns ok http status' do
-      get :new
-      expect(response).to have_http_status(200)
+    context 'when user is not logged in' do
+      it 'redirects to log in page' do
+        get :new
+        expect(response).to redirect_to(new_user_session_path)
+      end
+    end
+
+    context 'when user is logged in' do
+      before { sign_in(create(:user)) }
+      it 'returns 200 http status' do
+        get :new
+        expect(response).to have_http_status(200)
+      end
     end
   end
 
   describe 'POST create' do
-    context 'with invalid place' do
-      let(:place) { attributes_for(:place, name: '') }
-
-      it 'returns ok http status' do
-        post :create, params: { place: place }
-        expect(response).to have_http_status(200)
-      end
-
-      it 'does not persist place in database' do
-        expect { post :create, params: { place: place } }
-          .not_to change { Place.count }
+    context 'when user is not logged in' do
+      it 'redirects to log in page' do
+        post :create, params: { place: attributes_for(:place) }
       end
     end
 
-    context 'with less than 3 slides' do
-      let(:place) { attributes_for(:place, slides_count: 2) }
+    context 'when user is logged in' do
+      before { sign_in(create(:user)) }
+      context 'with invalid place' do
+        let(:place) { attributes_for(:place, name: '') }
 
-      it 'does not persist place in database' do
-        expect { post :create, params: { place: place } }
-          .not_to change { Place.count }
+        it 'returns ok http status' do
+          post :create, params: { place: place }
+          expect(response).to have_http_status(200)
+        end
+
+        it 'does not persist place in database' do
+          expect { post :create, params: { place: place } }
+            .not_to change { Place.count }
+        end
       end
 
-      it 'returns proper flash message' do
-        post :create, params: { place: place }
-        expect(flash[:error]).to be_present
+      context 'with less than 3 slides' do
+        let(:place) { attributes_for(:place, slides_count: 2) }
+
+        it 'does not persist place in database' do
+          expect { post :create, params: { place: place } }
+            .not_to change { Place.count }
+        end
+
+        it 'returns proper flash message' do
+          post :create, params: { place: place }
+          expect(flash[:error]).to be_present
+        end
+
+        it 'returns ok http status' do
+          post :create, params: { place: place }
+          expect(response).to have_http_status(200)
+        end
       end
 
-      it 'returns ok http status' do
-        post :create, params: { place: place }
-        expect(response).to have_http_status(200)
-      end
-    end
+      context 'with valid place' do
+        let(:place) do
+          attributes_for(
+            :place, slides_attributes: Array.new(3) { attributes_for(:slide) }
+          )
+        end
 
-    context 'with valid place' do
-      let(:place) do
-        attributes_for(
-          :place, slides_attributes: Array.new(3) { attributes_for(:slide) }
-        )
-      end
+        it 'persists place in database' do
+          expect { post :create, params: { place: place } }
+            .to change { Place.count }.by 1
+        end
 
-      it 'persists place in database' do
-        expect { post :create, params: { place: place } }
-          .to change { Place.count }.by 1
-      end
+        it 'persists slides in database' do
+          expect { post :create, params: { place: place } }
+            .to change { Slide.count }.by 3
+        end
 
-      it 'persists slides in database' do
-        expect { post :create, params: { place: place } }
-          .to change { Slide.count }.by 3
-      end
-
-      it 'redirects to created place' do
-        post :create, params: { place: place }
-        expect(response).to redirect_to(place_path(Place.last))
+        it 'redirects to created place' do
+          post :create, params: { place: place }
+          expect(response).to redirect_to(place_path(Place.last))
+        end
       end
     end
   end
