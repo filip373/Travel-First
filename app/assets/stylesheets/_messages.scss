@@ -1,4 +1,10 @@
 .messages {
   position: absolute;
+  text-align: center;
+  margin-top: 10px;
   width: 100%;
+}
+
+.messages .alert {
+  display: inline-block;
 }
