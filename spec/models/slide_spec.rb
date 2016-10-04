@@ -22,10 +22,27 @@ RSpec.describe Slide, type: :model do
     end
   end
 
-  context 'with valid factory' do
-    subject { build_stubbed(:slide) }
-    it 'is valid' do
-      expect(subject).to be_valid
+  context 'when photo is not null' do
+    context 'and below minimum height' do
+      subject { build_stubbed(:slide_with_photo_below_height) }
+      it { is_expected.to be_invalid }
+    end
+
+    context 'and below minimum width' do
+      subject { build_stubbed(:slide_with_photo_below_width) }
+      it { is_expected.to be_invalid }
+    end
+
+    context 'and has required dimensions' do
+      subject { build_stubbed(:slide) }
+      it { is_expected.to be_valid }
+
+      context 'after save' do
+        it 'resizes photo to target size' do
+          subject = create(:slide)
+          expect(subject.photo).to have_dimensions(1366, 853)
+        end
+      end
     end
   end
 

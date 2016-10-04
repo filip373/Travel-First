@@ -11,7 +11,9 @@ class TeaserUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [450, 300]
   end
 
-  process resize_to_fill: [1920, 1080]
+  def resize_to_target
+    resize_to_fill(1920, 1080)
+  end
 
   def extension_white_list
     %w(jpg jpeg gif png)

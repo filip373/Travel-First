@@ -5,7 +5,7 @@
       <div>
         <div class="centered-form rounded-box">
           <%= f.input :name, label: 'Place name', wrapper_html: { class: 'field' } %>
-          <%= f.input :teaser, label: 'Teaser photo', wrapper_html: { class: 'field' } %>
+          <%= f.input :teaser, hint: '(min size: 1920 x 1080)', label: 'Teaser photo', wrapper_html: { class: 'field' } %>
         </div>
       </div>
       <%= f.simple_fields_for :slides do |ff| %>
@@ -17,7 +17,7 @@
             <h3>Slide <%= ff.index + 1 %></h3>
           </div>
           <%= ff.input :title, label: 'Title', wrapper_html: { class: 'field' } %>
-          <%= ff.input :photo, label: 'Photo', wrapper_html: { class: 'field' } %>
+          <%= ff.input :photo, hint: '(min size: 1366 x 853)', label: 'Photo', wrapper_html: { class: 'field' } %>
           <%= ff.input :description, hint: '(100 to 650 characters)', label: 'Description', wrapper_html: { class: 'field' } %>
         </div>
       <% end %>

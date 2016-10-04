@@ -19,10 +19,12 @@ describe PhotoUploader do
     CarrierWave.clean_cached_files!(0)
   end
 
-  it 'has correct dimensions' do
-    expect(subject).to have_dimensions(1366, 853)
-  end
   it 'has correct format' do
     expect(subject).to be_format('jpeg')
+  end
+
+  describe '#resize_to_target' do
+    before { subject.resize_to_target }
+    it { is_expected.to have_dimensions(1366, 853) }
   end
 end
