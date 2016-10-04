@@ -14,11 +14,37 @@ describe Place, type: :model do
   context 'when teaser is not null' do
     subject { build_stubbed(:place) }
 
-    it 'is valid' do
-      expect(subject).to be_valid
-    end
-    it 'teaser exists' do
+    it 'exists' do
       expect(subject.teaser).to be
+    end
+
+    context 'when teaser is below min height' do
+      subject { build_stubbed(:place_with_teaser_below_height) }
+
+      it 'is invalid' do
+        expect(subject).to be_invalid
+      end
+    end
+
+    context 'when teaser is below min width' do
+      subject { build_stubbed(:place_with_teaser_below_width) }
+
+      it 'is invalid' do
+        expect(subject).to be_invalid
+      end
+    end
+
+    context 'when teaser has required size' do
+      it 'is valid' do
+        expect(subject).to be_valid
+      end
+
+      context 'after save' do
+        it 'resizes teaser to target size' do
+          subject = create(:place)
+          expect(subject.teaser).to have_dimensions(1920, 1080)
+        end
+      end
     end
   end
 

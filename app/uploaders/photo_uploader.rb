@@ -7,7 +7,9 @@ class PhotoUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fill: [1366, 853]
+  def resize_to_target
+    resize_to_fill(1366, 853)
+  end
 
   def extension_white_list
     %w(jpg jpeg gif png)
