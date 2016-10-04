@@ -25,6 +25,11 @@
 .title {
   font-size: 2em;
   display: inline;
+  line-height: 1em;
+}
+
+.description {
+  margin-top: 20px;
 }
 
 .slide {
@@ -68,9 +73,9 @@
   margin: 10px;
 }
 
-.centered-form textarea {
+.centered-form .form-group textarea {
   height: 150px;
-  width: 350px !important;
+  width: 100%;
   resize: vertical;
   overflow: auto;
 }
